@@ -79,13 +79,38 @@ $(document).ready(function() {
         'https://raw.githubusercontent.com/lucianorodrigo/portifolio/master/img/segredos-bitcoin.PNG',
       category: 'frontend',
     },
+    {
+      id: 7,
+      title: 'Scorm lg mc',
+      description:
+        'Conteúdo de plataforma de ensino no padrão scorm para treinamentos de dispositivo da lg',
+      demoUrl: 'https://www.youtube.com/watch?v=s84stBSErl4',
+      previewUrl:
+        'https://raw.githubusercontent.com/lucianorodrigo/portifolio/master/img/scorm-mc.PNG',
+      category: 'scorm',
+    },
+    {
+      id: 8,
+      title: 'Scrom lg uhd',
+      description:
+        'Conteúdo de plataforma de ensino no padrão scorm para treinamentos de dispositivo da lg',
+      demoUrl: 'https://youtu.be/0kFlW4NHOEw',
+      previewUrl:
+        'https://raw.githubusercontent.com/lucianorodrigo/portifolio/master/img/scorm-uhd.PNG',
+      category: 'scorm',
+    },
   ];
 
   var frontend = data.filter(function(item) {
     return item.category === 'frontend';
   });
+
   var wordpress = data.filter(function(item) {
     return item.category === 'wordpress';
+  });
+
+  var scorm = data.filter(function(item) {
+    return item.category === 'scorm';
   });
 
   var backend = data.filter(function(item) {
@@ -225,6 +250,10 @@ $(document).ready(function() {
       case 'wordpress':
         clearDom();
         renderToDom(wordpress);
+        break;
+      case 'scorm':
+        clearDom();
+        renderToDom(scorm);
         break;
       case 'backend':
         clearDom();
