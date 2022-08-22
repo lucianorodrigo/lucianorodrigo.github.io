@@ -218,6 +218,10 @@ $(document).ready(function() {
   }
   $('input[type=radio]').on('change', function(e) {
     switch (e.target.value) {
+      case 'reactjs':
+        clearDom();
+        renderToDom(reactjs);
+        break;
       case 'frontend':
         clearDom();
         renderToDom(frontend);
